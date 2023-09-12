@@ -1,5 +1,14 @@
 // NOTE
 
+let menu = document.getElementById('menu')
+let items = menu.getElementsByClassName('item')
+
+let data = [].map.call(items, item => item.textContent)
+// .map takes all of the results that are returned and parses into an empty array.
+// .call takes the variables in the argument parameters and returns the results to the array.
+
+
+
 // let btn = document.getElementById('btnRadio')
 // let output = document.getElementById('output')
 
@@ -12,8 +21,8 @@
         // })
 // });
 
-let btn = document.getElementById('btnCount')
-btn.addEventListener('click', () => {
-    let hTwoHeader = document.getElementsByTagName('h2')
-    alert(`The number of H2 tags are: ${hTwoHeader.length}`) 
-})
+// let btn = document.getElementById('btnCount')
+// btn.addEventListener('click', () => {
+//     let hTwoHeader = document.getElementsByTagName('h2')
+//     alert(`The number of H2 tags are: ${hTwoHeader.length}`) 
+// })
