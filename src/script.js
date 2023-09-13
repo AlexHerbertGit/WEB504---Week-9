@@ -1,10 +1,32 @@
 // NOTE
-//Creates a variable that targets the note class in the html
-let note = document.querySelector('.note')
+// let current = document.querySelector('.current')
+// let nextSibling = current.nextElementSibling
 
-//NOTE
-//Displays the parent node of the note variable
-console.log(note.parentNode)
+// while(nextSibling) {
+//     nextSibling = nextSibling.nextElementSibling
+// }
+
+// let current = document.querySelector('.current')
+// let prevSibling = currentNode.previousElementSibling
+
+let getSiblings = function(e) {
+    let siblings = []
+
+    if(!e.parent) {
+        return siblings
+    }
+    let sibling = e.parentNode.firstChild
+
+    while(sibling) {
+        if(sibling.nodeType == 1 && sibling !== e) {
+            sibling.push(sibling)
+        }
+        sibling = sibling.nextSibling
+    }
+    return siblings
+};
+
+console.log(siblings);
 
 // let menu = document.getElementById('menu')
 // let items = menu.getElementsByClassName('item')
