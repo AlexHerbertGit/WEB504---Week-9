@@ -1,9 +1,15 @@
 // NOTE
+//Creates a variable that targets the note class in the html
+let note = document.querySelector('.note')
 
-let menu = document.getElementById('menu')
-let items = menu.getElementsByClassName('item')
+//NOTE
+//Displays the parent node of the note variable
+console.log(note.parentNode)
 
-let data = [].map.call(items, item => item.textContent)
+// let menu = document.getElementById('menu')
+// let items = menu.getElementsByClassName('item')
+
+// let data = [].map.call(items, item => item.textContent)
 // .map takes all of the results that are returned and parses into an empty array.
 // .call takes the variables in the argument parameters and returns the results to the array.
 
